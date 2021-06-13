@@ -3,7 +3,7 @@ from torch import nn
 
 
 class ConvAutoencoder(nn.Module):
-    def __init__(self, feat_dim=1, enc_dim=10, channels=1, strides=1):
+    def __init__(self, enc_dim=10, channels=1, strides=1):
         
         super().__init__()
        
@@ -27,10 +27,9 @@ class ConvAutoencoder(nn.Module):
         
         return x
 
-
 if __name__ == "__main__":
     
-    model = ConvAutoencoder(10)
+    model = ConvAutoencoder()
     
     # batch, seq_len, num_feat
     a = torch.zeros((1, 1, 100))
