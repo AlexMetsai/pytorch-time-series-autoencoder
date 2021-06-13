@@ -27,3 +27,16 @@ class ConvAutoencoder(nn.Module):
         
         return x
 
+
+if __name__ == "__main__":
+    
+    model = ConvAutoencoder(10)
+    
+    # batch, seq_len, num_feat
+    a = torch.zeros((1, 1, 100))
+    out = model(a)
+    print(a.shape, out.shape)
+    
+    a = torch.zeros((1, 1, 153))
+    out = model(a)
+    print(a.shape, out.shape)
