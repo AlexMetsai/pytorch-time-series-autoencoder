@@ -33,7 +33,7 @@ if __name__ == "__main__":
     
     model = ConvAutoencoder()
     
-    # batch, seq_len, num_feat
+    # batch, channels, seq len
     a = torch.zeros((1, 1, 100))
     out = model(a)
     print(a.shape, out.shape)
