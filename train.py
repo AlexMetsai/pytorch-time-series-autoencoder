@@ -1,4 +1,4 @@
-# As simple as possible training loop.
+# As-simple-as-possible training loop.
 
 import torch
 import numpy as np
@@ -22,3 +22,17 @@ X = np.random.random((300, 1, 100))  # toy data
 Y = X
 dataset = TensorDataset(torch.tensor(X), torch.tensor(Y))
 dataloader = DataLoader(dataset, batch_size=256, shuffle=True)
+
+# Training loop
+for epoch in range(200):
+    for x, y in dataloader:
+        
+        optimizer.zero_grad()
+        
+        # forward and backward pass
+        out = model(x)
+        loss = criterion(out, y)
+        loss.backward()
+        optimizer.step()
+        
+        print(loss.item())  # loss should be decreasing
