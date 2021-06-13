@@ -29,6 +29,8 @@ class ConvAutoencoder(nn.Module):
 
 if __name__ == "__main__":
     
+    # Sanity check, ignore this 'main' code.
+    
     model = ConvAutoencoder()
     
     # batch, seq_len, num_feat
