@@ -1,3 +1,7 @@
+# Alexandros I. Metsai
+# alexmetsai@gmail.com
+# MIT License
+
 import torch
 from torch import nn
 
