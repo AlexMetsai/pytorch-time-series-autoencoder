@@ -1,4 +1,8 @@
-# As-simple-as-possible training loop.
+# Alexandros I. Metsai
+# alexmetsai@gmail.com
+# MIT License
+
+# As-simple-as-possible training loop for an autoencoder.
 
 import torch
 import numpy as np
